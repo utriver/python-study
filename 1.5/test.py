@@ -33,12 +33,16 @@
 # else:
 #     print("루프 정상 종료")
 
-nums = [x**2 for x in range(1,6)]
-print(nums)
+# nums = [x**2 for x in range(1,6)]
+# print(nums)
 
 
-evens = [x for x in range(1,11) if x%2 == 0]
-print(evens)
+# evens = [x for x in range(1,11) if x%2 == 0]
+# print(evens)
 
-unique = {len(word) for word in {"apple","sdfsadf","adfadsfadsf"}}
-print(unique)
+# unique = {len(word) for word in {"apple","sdfsadf","adfadsfadsf"}}
+# print(unique)
+def greet(name, age):
+    print(f"안녕 {name},{age}")
+
+greet("민수",12)
