@@ -18,4 +18,26 @@ class UserAccount:
         
 usr = UserAccount("김우진",1234)
 old,new = input("기존 비번과 신규 비번을 입력하세요: ").split(',')
-usr.change_password(old,new)
+usr.change_password(int(old),int(new))
+password = int(input("비밀번호를 입력하세요: "))
+print(usr.check_password(password))
+
+
+class Student:
+    def __init__(self,score):
+        self.__score = score
+    @property
+    def test(self):
+        return self.__score
+    @test.setter
+    def test(self,num):
+        if 0<= num <= 100:
+            self.__score = num 
+        else:
+            raise ValueError("범위를 벗어났습니다.")
+        
+s=Student(30)
+s.test=int(input("점수를 입력하시오:"))
+print(s.test)
+s.test=int(input("점수를 입력하시오:"))
+print(s.test)
